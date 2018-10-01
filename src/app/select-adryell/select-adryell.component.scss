@@ -1,0 +1,166 @@
+
+.text-select{
+  float: left;
+  //background-color: red;
+  height: 27px;
+  width: 90%;
+  padding-top: 13px;
+  padding-left: 10px;
+
+}
+.select{
+  font-family: sans-serif;
+  width: 100%;
+  border: 1px solid #bbbbbb;
+  height: 40px;
+  border-radius: 5px;
+  text-align: left;
+  background: #fff;
+
+}
+.icon-close{
+  right: 0;
+  padding-top: 10px;
+}
+
+.icon-close img{
+  cursor: pointer;
+}
+
+.selecionados-text{
+  //float: left;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: #545353;
+}
+.box{
+  font-family: sans-serif;
+  color: #616161;
+  margin-top: 2px;
+  width: 100%;
+  border: 1px solid #bbbbbb;
+  height: 250px;
+  border-radius: 5px;
+  position: relative;
+  background: #fff;
+}
+
+
+.input-search{
+  margin-left: 10px;
+  border: none;
+  width: 70%;
+  height: 35px;
+  font-size: 15px;
+}
+
+.input-search:focus{
+    border: 0 none;
+    outline: 0;
+    color: #bbbbbb;
+}
+
+.item-search{
+  background-color: #fff;
+  width: 97.5%;
+  text-align: left;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  padding-left: 10px;
+
+  -webkit-box-shadow: 0px 8px 20px 0px rgba(0,0,0,0.17);
+  -moz-box-shadow: 0px 8px 20px 0px rgba(0,0,0,0.17);
+  box-shadow: 0px 8px 20px 0px rgba(0,0,0,0.17);
+}
+.item-search  img{
+  margin-top: 15px;
+}
+
+
+.item-select{
+  padding: 5px;
+}
+
+.box-items{
+//  margin-top: 60px;
+  padding-top: 10px;
+  padding-left: 10px;
+  height: 186px;
+  overflow:auto;
+  text-align: left;
+}
+
+
+
+
+
+
+
+
+
+
+.container {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    cursor: pointer;
+    font-size: 18px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    background-color: #eee;
+}
+
+.container:hover input ~ .checkmark {
+    background-color: #ccc;
+}
+
+.container input:checked ~ .checkmark {
+    background-color: #4b1570;
+}
+
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.container input:checked ~ .checkmark:after {
+    display: block;
+}
+
+.container .checkmark:after {
+    left: 6px;
+    top: 2px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.label{
+  font-family: sans-serif;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  font-weight: bold;
+  color: #7e7e7e;
+}

@@ -1,0 +1,110 @@
+<!-- <form>
+
+	<ul class="select">
+		<li>
+			<input class="select_close" type="radio" name="awesomeness" id="awesomeness-close" value=""/>
+			<span class="select_label select_label-placeholder">Awesomeness Level</span>
+		</li>
+
+		<li class="select_items">
+			<input class="select_expand" type="radio" name="awesomeness" id="awesomeness-opener"/>
+			<label class="select_closeLabel" for="awesomeness-close"></label>
+
+			<ul class="select_options">
+				<li class="select_option">
+					<input class="select_input" type="radio" name="awesomeness" id="awesomeness-ridiculous"/>
+					<label class="select_label" for="awesomeness-ridiculous">ridiculous</label>
+				</li>
+
+				<li class="select_option">
+					<input class="select_input" type="radio" name="awesomeness" id="awesomeness-reasonable"/>
+					<label class="select_label" for="awesomeness-reasonable">reasonable</label>
+				</li>
+
+				<li class="select_option">
+					<input class="select_input" type="radio" name="awesomeness" id="awesomeness-lacking"/>
+					<label class="select_label" for="awesomeness-lacking">lacking</label>
+				</li>
+
+				<li class="select_option">
+					<input class="select_input" type="radio" name="awesomeness" id="awesomeness-awesomeless"/>
+					<label class="select_label" for="awesomeness-awesomeless">awesomeless</label>
+				</li>
+			</ul>
+
+			<label class="select_expandLabel" for="awesomeness-opener"></label>
+		</li>
+	</ul>
+
+</form> -->
+
+
+
+
+<!-- <input type="text" name="" value="">
+
+<div class="select animated zoomIn" style="background-color: #000;">
+    <input type="radio" name="option">
+    <i class="toggle icon icon-arrow-down"></i>
+    <i class="toggle icon icon-arrow-up"></i>
+    <span class="placeholder">Choose...</span>
+    <label class="option">
+        <input type="checkbox" name="option">
+        <span class="title animated fadeIn"><i class="icon icon-speedometer"></i>Speedometer</span>
+    </label>
+    <label class="option">
+        <input type="checkbox" name="option">
+        <span class="title animated fadeIn"><i class="icon icon-fire"></i>Fire</span>
+    </label>
+    <label class="option">
+        <input type="checkbox" name="option" disabled>
+        <span class="title animated fadeIn"><i class="icon icon-handbag"></i>Handbag</span>
+    </label>
+    <label class="option">
+        <input type="checkbox" name="option">
+        <span class="title animated fadeIn"><i class="icon icon-badge"></i>Badge</span>
+    </label>
+</div> -->
+
+
+<div class="tudo">
+
+  <div class="label">
+    {{label}}
+  </div>
+  <div class="select" >
+    <div class="text-select" (click)="openOptions()">
+      <!-- {{placeholder}}
+      {{selecionados[1].text}} -->
+      <div *ngIf="selecionados.length == 0" style="color: #bbbbbb">
+        Selecione...
+      </div>
+      <div *ngIf="selecionados.length != 0" class="selecionados-text">
+        <ng-container *ngFor="let item of selecionados">
+            {{item.text}},
+        </ng-container >
+      </div>
+
+    </div>
+    <div class="icon-close" [hidden]="selecionados.length == 0">
+      <img src="https://png.icons8.com/windows/20/000000/cancel.png" (click)="removeAll()">
+    </div>
+  </div>
+  <!-- <ng-template let-c="close" let-d="dismiss"> -->
+  <div id="box" class="box"  [hidden]="showOptions" [@openClose]="isOpen ? 'open' : 'closed'">
+    <div class="item-search">
+      <img src="https://png.icons8.com/ios/25/bbbbbb/search-filled.png">
+      <input appAutofocus class="input-search" type="text" name="" value="" (keyup)="filter($event)" placeholder="{{placeholder}}">
+    </div>
+    <div class="box-items">
+      <div class="item-select" *ngFor="let item of options;let i = index;">
+        <label class="container">{{item.text}}
+          <input type="checkbox" (click)="fOptionSelect(item, i);" [checked]="item.check">
+          <span class="checkmark"></span>
+        </label>
+
+
+      </div>
+    </div>
+  </div>
+</div>
